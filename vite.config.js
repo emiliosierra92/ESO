@@ -12,7 +12,7 @@ export default defineConfig({
           if (loaderContext.includes(path.normalize('src/styles/global.scss'))) {
             return content;
           }
-          return `@use "src/styles/global.scss" as *;` + content;
+          return `@use "assets/css/main.css" as *;` + content;
         }
       }
     }
