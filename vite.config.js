@@ -9,7 +9,7 @@ export default defineConfig({
       scss: {
         additionalData: (content, loaderContext) => {
           // Don't inject globals into the global stylesheet itself
-          if (loaderContext.includes(path.normalize('src/styles/global.scss'))) {
+          if (loaderContext.includes(path.normalize('assets/css/main.css'))) {
             return content;
           }
           return `@use "assets/css/main.css" as *;` + content;
